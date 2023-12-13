@@ -32,7 +32,7 @@ const getMonsters = async () => {
 
 
 const useAPI = () => {
-  return { monsters, pages, activePage, loading, pageSize, getmonsters }
+  return { monsters, pages, activePage, loading, pageSize, getMonsters }
 }
 
 
