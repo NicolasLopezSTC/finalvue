@@ -6,11 +6,11 @@
   const { getDepartment } = useAPI()
 
   const selectCard = () => {
-    console.log(`${props.employee.name} selected`)
+    console.log(`${props.monster.name} selected`)
   }
 
   const props = defineProps({
-    employee: {
+    monster: {
       type: Object,
       required: true,
       default: () => {
@@ -18,7 +18,7 @@
           createdAt: '2022-01-01',
           departmentId: '123',
           email: 'john.doe@example.com',
-          employeeId: '123',
+          monsterId: '123',
           name: 'John Doe',
           quote: 'Really Cool quote',
           title: 'Position',
@@ -28,7 +28,7 @@
     },
   })
 
-  const departmentResponse = await getDepartment(props.employee.departmentId)
+  const departmentResponse = await getDepartment(props.monster.departmentId)
   const department = ref(departmentResponse)
 </script>
 
@@ -38,9 +38,9 @@
       <img :src="faker.internet.avatar()" alt="" srcset="" />
     </div>
     <div class="card-details">
-      <p class="card-details-name">{{ props.employee.name }}</p>
-      <p class="card-details-job">{{ props.employee.title }}, {{ department.name }}</p>
-      <p class="card-details-quote">"{{ props.employee.quote }}"</p>
+      <p class="card-details-name">{{ props.monster.name }}</p>
+      <p class="card-details-job">{{ props.monster.title }}, {{ department.name }}</p>
+      <p class="card-details-quote">"{{ props.monster.quote }}"</p>
     </div>
   </div>
 </template>

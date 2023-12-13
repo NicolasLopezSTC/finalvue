@@ -2,13 +2,13 @@
   import useAPI from '@/composables/useAPI'
   import MainCardsSingle from '@/components/MainCardsSingle.vue'
 
-  const { employees } = useAPI()
+  const { monsters } = useAPI()
 </script>
 
 <template>
   <div class="sub-wrapper">
     <Suspense>
-      <MainCardsSingle v-for="employee in employees" :key="employee.employeeId" :employee="employee" />
+      <MainCardsSingle v-for="monster in monsters" :key="monster.monsterId" :monster="monster" />
       <template #fallback>
         <div>Loading...</div>
       </template>
