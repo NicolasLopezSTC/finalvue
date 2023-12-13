@@ -28,8 +28,7 @@
     },
   })
 
-  const departmentResponse = await getDepartment(props.monster.departmentId)
-  const department = ref(departmentResponse)
+  
 </script>
 
 <template>
@@ -39,7 +38,6 @@
     </div>
     <div class="card-details">
       <p class="card-details-name">{{ props.monster.name }}</p>
-      <p class="card-details-job">{{ props.monster.title }}, {{ department.name }}</p>
       <p class="card-details-quote">"{{ props.monster.quote }}"</p>
     </div>
   </div>
@@ -67,3 +65,4 @@
     }
   }
 </style>
+

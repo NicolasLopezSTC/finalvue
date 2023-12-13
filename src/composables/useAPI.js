@@ -29,14 +29,10 @@ const getMonsters = async () => {
   loading.value = false
 }
 
-const getDepartment = async (departmentId) => {
-  const { data } = await api.get(`/api/departments/${departmentId}`)
-  return data
-}
 
 
 const useAPI = () => {
-  return { monsters, pages, activePage, loading, pageSize, getmonsters, getDepartment }
+  return { monsters, pages, activePage, loading, pageSize, getmonsters }
 }
 
 
