@@ -31,8 +31,8 @@
       
     </div>
     <div class="card-details">
-      <p class="card-details-name">{{ props.monster.name }}</p>
-      <p class="card-details-quote">"{{ props.monster.quote }}"</p>
+      <p class="card-details-name">{{ props.monster.monsterName }}</p>
+      <p class="card-details-quote">"{{ props.monster.monsterDesc }}"</p>
     </div>
   </div>
 </template>
