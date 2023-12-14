@@ -1,9 +1,6 @@
 <script setup>
-  import { ref } from 'vue'
-  import { faker } from '@faker-js/faker'
-
-  import useAPI from '@/composables/useAPI'
-  const { getDepartment } = useAPI()
+  
+  
 
   const selectCard = () => {
     console.log(`${props.monster.name} selected`)
@@ -16,12 +13,9 @@
       default: () => {
         return {
           createdAt: '2022-01-01',
-          departmentId: '123',
-          email: 'john.doe@example.com',
           monsterId: '123',
-          name: 'John Doe',
-          quote: 'Really Cool quote',
-          title: 'Position',
+          monsterName: 'Beholder',
+          monsterDesc: 'Really Cool desc',
           updatedAt: '2022-01-01',
         }
       },
@@ -34,7 +28,7 @@
 <template>
   <div class="card" @click="selectCard">
     <div class="card-image">
-      <img :src="faker.internet.avatar()" alt="" srcset="" />
+      
     </div>
     <div class="card-details">
       <p class="card-details-name">{{ props.monster.name }}</p>
